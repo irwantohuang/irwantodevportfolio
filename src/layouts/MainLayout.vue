@@ -8,7 +8,7 @@ import MainView from './MainView.vue';
 <template>
     <main class="max-w-[1920px] relative z-30 h-screen bg-red-200">
 
-        <div class="container mx-auto py-[25px] md:py-[35px] lg:py-[50px] bg-green-100 h-full">
+        <div class="container mx-auto py-[25px] md:py-[35px] lg:py-[50px] bg-primary-light h-full">
             <div class="flex gap-4 h-full">
                 <SideBar />
 
