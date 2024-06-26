@@ -17,6 +17,9 @@
 
 
 .shadow-inset {
-    /* @apply shadow-[0_0_69px_-65px_rgba(0,0,0,1)_inset] */
     @apply shadow-[inset_-12px_-8px_40px_#46464620]
+}
+
+.text-link {
+    @apply font-medium text-accent transition-all duration-100 hover:text-accent-200
 }

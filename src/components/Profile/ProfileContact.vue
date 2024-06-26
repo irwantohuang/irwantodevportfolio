@@ -2,7 +2,7 @@
 import Icon from '../../ui/common/Icon.vue';
 
 defineProps({
-    contact: Array
+    contact: Object
 })
 </script>
 
@@ -14,8 +14,7 @@ defineProps({
             <div class="flex flex-col h-full justify-between">
                 <h3 class="text-xs md:text-sm lg:text-xs font-bold text-primary-dark-200/50 uppercase">{{ data.title }}</h3>
                 <a href="#"
-                    class="text-sm md:text-base lg:text-[11px] font-medium text-accent transition-all duration-50 hover:text-accent-200">{{
-            data.url }}</a>
+                    class="text-sm md:text-base lg:text-[11px] text-link">{{ data.url }}</a>
             </div>
         </div>
     </section>
