@@ -21,8 +21,8 @@ defineEmits([
                     class="absolute top-4 right-4 rounded-full" />
 
 
-                <div class="container mx-auto py-[75px] h-full">
-                    <div class="h-full flex flex-col items-center">
+                <div class="container mx-auto py-[55px] h-full">
+                    <div class="relative h-full flex flex-col items-center">
                         <header class="w-full flex flex-col items-center">
                             <div
                                 class="w-[150px] h-[150px] p-2 bg-primary-light border border-primary-dark-200 rounded-2xl shadow-inner overflow-hidden flex items-center justify-center">
@@ -39,9 +39,9 @@ defineEmits([
                         <HorizontalLine />
 
                         <article class="flex flex-col gap-4 w-full">
-                            <section id="contact">
-                                <div v-for="data in profile.contact" class="mt-6 flex items-center h-auto gap-4 ">
-                                    <Icon class="w-[45px] h-[45px] md:w-[55px] md:h-[55px] md:text-2xl text-xl" :icon="data.icon" />
+                            <section id="contact" class="flex flex-col gap-6">
+                                <div v-for="data in profile.contact" class="flex items-center h-auto gap-4 ">
+                                    <Icon class="w-[45px] h-[45px] md:w-[50px] md:h-[50px] md:text-2xl text-xl" :icon="data.icon" />
 
                                     <div class="flex flex-col h-full justify-between ">
                                         <h3 class="text-xs md:text-sm font-bold text-primary-dark-200/50 uppercase">{{ data.title }}</h3>
@@ -51,9 +51,9 @@ defineEmits([
                             </section>
 
 
-                            <section id="social-media" class="mt-6">
-                                <div class="flex flex-row items-center gap-4 justify-center">
-                                    <Icon class="w-[50px] h-[50px] text-3xl md:w-[65px] md:h-[65px] md:text-4xl" v-for="data in profile.socialMedia" :icon="data.icon" :link="data.url" />
+                            <section id="social-media" class="absolute inset-x-0 bottom-4">
+                                <div class="flex flex-row items-center gap-4 md:gap-6 justify-center">
+                                    <Icon class="w-[50px] h-[50px] text-3xl md:w-[55px] md:h-[55px] md:text-4xl" v-for="data in profile.socialMedia" :icon="data.icon" :link="data.url" />
                                 </div>
                             </section>
                         </article>
