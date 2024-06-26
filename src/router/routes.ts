@@ -1,5 +1,9 @@
 export const routes = [
     {
+        path: '/',
+        redirect: '/home'
+    },
+    {
         path: "/home",
         name: "Home",
         component: () => import('../pages/HomePage.vue')
@@ -8,16 +12,14 @@ export const routes = [
         path: "/about",
         name: "About",
         component: () => import('../pages/AboutPage.vue')
-    }
-    ,
+    },
     {
         path: "/skill",
         name: "Skill",
         component: () => import('../pages/SkillPage.vue')
-    }
-    ,
+    },
     {
-        path: "/portoflio",
+        path: "/portfolio",
         name: "Portfolio",
         component: () => import('../pages/PortfolioPage.vue')
     }
