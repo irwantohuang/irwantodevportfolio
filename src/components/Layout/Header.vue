@@ -32,8 +32,8 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
                         <ButtonIcon v-else @click="toggleMenuVisibility()" icon="fa-solid fa-border-all" />
                     </div>
 
-                    <MenuMobile class="lg:hidden" :menu="menu" :menuVisibility="menuVisibility" @toggle-menu-visibility="toggleMenuVisibility()"/>
-                    <ProfileMobile class="lg:hidden":profileVisibility="profileVisibility" @toggle-profile-visibility="toggleProfileVisibility()" />
+                    <MenuMobile :menu="menu" :menuVisibility="menuVisibility" @toggle-menu-visibility="toggleMenuVisibility()"/>
+                    <ProfileMobile :profileVisibility="profileVisibility" @toggle-profile-visibility="toggleProfileVisibility()" />
 
                     <ul class="hidden lg:flex items-center justify-center gap-8 h-full border border-black px-4">
                         <li v-for="data in menu" :key="data.id">

@@ -1,7 +1,5 @@
-import { ContactDetail } from "./ContactDetail";
-
 export interface Contact {
-    email: ContactDetail,
-    phone: ContactDetail,
-    address: ContactDetail
+    title: string,
+    url: string,
+    icon: string,
 }

@@ -4,6 +4,7 @@ import { SocialMedia } from "./SocialMedia";
 export interface Profile {
     name: string,
     profilePicture: string,
-    contact: Contact
-    socialMedia: SocialMedia
+    headline: string,
+    contact: Contact[],
+    socialMedia: SocialMedia[]
 }
