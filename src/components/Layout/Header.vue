@@ -44,16 +44,6 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
                             </router-link>
                         </li>
                     </ul>
-
-                    <!-- <li v-for="data in menu" :key="data.id" class="flex">
-                    <router-link @click="$emit('toggleMenuVisibility')" :to="{ name: data.name }" 
-                        class="flex gap-3 items-center rounded-sm py-1.5 ps-4 w-1/3 text-base font-medium hover:bg-primary hover:text-primary-light transition-all duration-100 ease-in"
-                        active-class="bg-primary text-primary-light hover:bg-accent-200">
-                        <fa-icon :icon="data.icon" />
-                        {{ data.name }}
-                    </router-link>
-                </li> -->
-
                 </nav>
             </div>
             
