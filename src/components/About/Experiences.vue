@@ -11,8 +11,8 @@ import { experience } from '../../data/experience'
                     <div class="pl-8 flex flex-col w-full">
 
                         <div class="flex items-center justify-between w-full">
-                            <h3 class="font-bold text-primary-dark-200 text-base uppercase">{{ exp.position }}</h3>
-                            <p class="text-sm italic text-primary-dark-200 text-right">{{ exp.startDate }} - {{ exp.endDate }}</p>
+                            <h3 class="font-semibold text-primary-dark-200/85 text-base uppercase">{{ exp.position }}</h3>
+                            <p class="text-sm italic text-primary-dark-200/50 text-right">{{ exp.startDate }} - {{ exp.endDate }}</p>
                         </div>
                         <h3 class="font-medium text-base text-primary">{{ exp.company }}</h3>
                     </div>

@@ -18,7 +18,7 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
 
 <template>
 
-    <header class="w-full h-[60px] lg:h-[75px] rounded-md overflow-hidden bg-primary-light-200 shadow-sm">
+    <header class="w-full h-[60px] lg:h-[75px] px-2 rounded-md overflow-hidden bg-primary-light-200 shadow-sm">
         <div class="container mx-auto h-full">
 
             <div class="flex items-center justify-between h-full">

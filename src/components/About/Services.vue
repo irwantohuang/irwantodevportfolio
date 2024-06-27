@@ -11,12 +11,12 @@ import { services } from '../../data/services'
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
 
             <template v-for="service in services" :key="service.id">
-                <div class="bg-primary-light border border-black rounded-md flex items-start p-4 gap-6">
+                <div class="bg-primary-light shadow-md rounded-md flex items-start p-4 gap-6 transition-all duration-100 ease-in hover:scale-[102%] border">
                     <Icon class="min-w-[50px] min-h-[50px] text-2xl" :icon="service.icon" />
 
                     <div class="flex flex-col">
-                        <h3 class="font-bold text-lg md:text-base lg:text-lg text-primary uppercase">{{ service.title }}</h3>
-                        <p class="font-medium text-sm md:text-xs lg:text-sm text-justify text-primary-dark-200/75">{{ service.description }}</p>
+                        <h3 class="font-semibold text-lg md:text-base lg:text-lg text-primary uppercase">{{ service.title }}</h3>
+                        <p class="font-normal text-sm md:text-xs lg:text-sm text-justify text-primary-dark-200/65">{{ service.description }}</p>
                     </div>
                 </div>
             </template>

@@ -5,7 +5,7 @@ import HorizontalLine from '../ui/common/HorizontalLine.vue';
 </script>
 
 <template>
-    <div class="container mx-auto bg-primary-light-200 py-[25px] w-full h-full">
+    <div class="container mx-auto py-[25px] w-full h-full">
 
         <div class="">
             <p class="text-sm md:text-base lg:text-lg text-justify">Hi! I'm 
