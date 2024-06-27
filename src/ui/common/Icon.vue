@@ -2,6 +2,7 @@
 defineProps({
     icon: String,
     link: String,
+    type: String,
 })
 </script>
 
@@ -9,7 +10,8 @@ defineProps({
 
 
     <a :href="link" target="_blank" class="text-primary cursor-pointer transition-all duration-50 ease-in hover:text-primary-light hover:bg-primary-200 flex items-center justify-center rounded-md shadow-inset">
-        <fa-icon :icon="icon" />
+        <i v-if="type === 'devIcon'" :class="icon"></i>
+        <fa-icon v-else :icon="icon" />
     </a>
 
 </template>

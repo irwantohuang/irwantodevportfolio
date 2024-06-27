@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import SkillView from '../views/SkillView.vue'
+
+</script>
+
 <template>
-    <h1>Skill Page</h1>
+
+    <section id="skill" class="relative z-30">
+        <SkillView />
+    </section>
+
 </template>
