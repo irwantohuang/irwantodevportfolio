@@ -13,7 +13,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                primary: "Open Sans, sans-serif",
+                primary: "Poppins, sans-serif",
             },
             colors: {
                 primary: {
