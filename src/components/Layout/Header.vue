@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { menu } from '../../data/menu';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import MenuMobile from './MenuMobile.vue'
 import ButtonIcon from '../../ui/common/ButtonIcon.vue';
@@ -17,6 +17,20 @@ const toggleMenuVisibility = () => menuVisibility.value = !menuVisibility.value;
 
 const profileVisibility = ref<boolean>(false);
 const toggleProfileVisibility = () => profileVisibility.value = !profileVisibility.value
+
+
+const darkMode = ref(false);
+const toggleAppearance = () => {
+    const currentAppearance = localStorage.getItem('appearance')
+    localStorage.appearance = (currentAppearance === 'dark') ? 'light' : 'dark';
+    darkMode.value = currentAppearance === 'dark' ? false : true;
+}
+
+onMounted(() => {
+    const currentAppearance = localStorage.getItem('appearance')
+    darkMode.value = currentAppearance === 'dark' ? true : false
+})
+
 </script>
 
 <template>
@@ -26,17 +40,21 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
 
             <div class="flex items-center justify-between h-full">
                 <div class="relative">
-                    <h1 class="text-xl font-semibold text-accent-200">{{ routeName }}</h1>
+                    <h1 class="text-xl font-semibold text-accent-200">{{ routeName }} {{ darkMode }} </h1>
                     <hr class="border-t-2 border-t-accent-200 w-2/5">
                 </div>
 
-                <nav>
+                <nav class="flex h-full gap-4 items-center">
                     <div class="flex lg:hidden gap-2">
                         <ButtonIcon @click="toggleProfileVisibility()" icon="fa-solid fa-user" /> 
 
                         <ButtonIcon v-if="menuVisibility" @click="toggleMenuVisibility()" icon="fa-solid fa-xmark" :useBackground="true" /> 
                         <ButtonIcon v-else @click="toggleMenuVisibility()" icon="fa-solid fa-border-all" />
+                        <ButtonIcon @click="toggleAppearance()" class="order-2" :icon="darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" />
+
                     </div>
+
+                    <ButtonIcon @click="toggleAppearance()" class="order-2 hidden lg:flex" :icon="darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" />
 
                     <MenuMobile :menu="menu" :menuVisibility="menuVisibility" @toggle-menu-visibility="toggleMenuVisibility()"/>
                     <ProfileMobile :profileVisibility="profileVisibility" @toggle-profile-visibility="toggleProfileVisibility()" />

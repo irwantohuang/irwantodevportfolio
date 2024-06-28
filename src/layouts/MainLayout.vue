@@ -3,6 +3,8 @@ import Header from '../components/Layout/Header.vue';
 import SideBar from '../components/Layout/SideBar.vue';
 import MainView from './MainView.vue';
 
+
+
 </script>
 
 <template>
