@@ -16,15 +16,9 @@ const showDetailModal = ref(false);
 const toggleDetailModal = (id: string, type: string) => {
     if (type === 'open') router.push({ name: 'PortfolioDetail', params: {id} })
     else router.push({ name: 'Portfolio' })
-    // document.body.style.overflow = result ? 'hidden' : 'auto'
     showDetailModal.value = !showDetailModal.value;
-
-    document.body.style.overflow = type === 'open' ? 'hidden' : 'scroll'
     const main = document.querySelector('.main') as HTMLElement
-    console.log('ini main ini', main)
     main.style.overflow = type === 'open' ? 'hidden' : 'scroll'
-    console.log('ini main ini udah', main.style.overflow)
-
     portfolioDetail.value = portfolio.find(e => e.id === id);
 }
 
@@ -45,24 +39,10 @@ const toggleDetailModal = (id: string, type: string) => {
                 <h3 class="px-2 font-medium text-base text-primary group-hover:text-accent-200">{{ porto.title }}</h3>
             </div>
         </div>
-
-
-        <!-- Porto Detail -->
-        <!-- <Teleport to="portfolio"> -->
-            <!-- <Transition name="slide-up">
-                <div v-show="showDetail" class="px-2 h-full w-full absolute inset-x-0 bottom-0 bg-primary-light-300/90">
-                    <div class="container mx-auto py-[25px]">
-                        <div class="absolute top-2 right-2">
-                            <ButtonIcon @click="closeDetail()" icon="fa-solid fa-xmark" /> 
-                        </div>
-                    </div>
-                </div>
-            </Transition> -->
-        <!-- </Teleport> -->
-
     </div>
 
-    <PortfolioDetail :portfolioDetail="portfolioDetail" :showDetailModal="showDetailModal" @toggle-detail-modal="toggleDetailModal" />
-
+    <Transition name="slide-up">
+        <PortfolioDetail v-show="showDetailModal" :portfolioDetail="portfolioDetail" :showDetailModal="showDetailModal" @toggle-detail-modal="toggleDetailModal" />
+    </Transition>
 
 </template>

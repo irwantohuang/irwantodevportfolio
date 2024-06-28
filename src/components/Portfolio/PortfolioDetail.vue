@@ -18,8 +18,8 @@ defineEmits([
 
 <template>
 
-    <Transition name="slide-up">
-        <div v-show="showDetailModal" class="rounded-md h-full w-full absolute inset-x-0 bottom-0 shadow-md bg-primary-light-200">
+    <!-- <Transition name="slide-up"> -->
+        <div class="rounded-md h-full w-full absolute inset-x-0 bottom-0 shadow-md bg-primary-light-200">
             <div class="container mx-auto py-[25px] h-full overflow-scroll">
                 <div class="absolute -top-3.5 -right-3 z-[99]">
                     <ButtonIcon @click="$emit('toggleDetailModal', null, 'close')" :useBackground="true" icon="fa-solid fa-xmark" />
@@ -30,12 +30,15 @@ defineEmits([
                         <SwiperImage :detail="portfolioDetail?.detail.image" />
                     </div>
 
-                    <div class="flex justify-between items-start lg:hidden">
+                    <div class="flex justify-between items-start lg:hidden w-full">
                         <h3 class="text-xl font-medium text-primary">{{ portfolioDetail?.title }}</h3>
                         <PortfolioLink :livePreview="portfolioDetail?.detail.livePreview" :github="portfolioDetail?.detail.githubLink" type="mobile"/>
                     </div>
 
-                    <div class="hidden lg:flex lg:flex-col">
+                    <HorizontalLine class="lg:hidden mt-2 mb-4" />
+
+
+                    <div class="hidden lg:flex lg:flex-col w-1/3">
                         <h3 class="text-xl font-medium text-primary">{{ portfolioDetail?.title }}</h3>
                         <HorizontalLine class="mt-2 mb-4" />
                         <PortfolioTech :tools="portfolioDetail?.detail.technology" />
@@ -49,5 +52,5 @@ defineEmits([
                 </div>
             </div>
         </div>
-    </Transition>
+    <!-- </Transition> -->
 </template>

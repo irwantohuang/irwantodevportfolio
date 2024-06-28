@@ -2,7 +2,16 @@ import { Portfolio } from "../types/Portfolio";
 
 // Youtube Showcase
 import Cover1 from '../assets/portfolio/youtube-showcase/cover.png'
+import P1Image0 from '../assets/portfolio/youtube-showcase/image-0.png'
 import P1Image1 from '../assets/portfolio/youtube-showcase/image-1.png'
+import P1Image2 from '../assets/portfolio/youtube-showcase/image-2.png'
+import P1Image3 from '../assets/portfolio/youtube-showcase/image-3.png'
+import P1Image4 from '../assets/portfolio/youtube-showcase/image-4.png'
+import P1Image5 from '../assets/portfolio/youtube-showcase/image-5.png'
+import P1Image6 from '../assets/portfolio/youtube-showcase/image-6.png'
+import P1Image7 from '../assets/portfolio/youtube-showcase/image-7.png'
+import P1Image8 from '../assets/portfolio/youtube-showcase/image-8.png'
+import P1Image9 from '../assets/portfolio/youtube-showcase/image-9.png'
 
 
 // Academia Connect
@@ -20,7 +29,7 @@ export const portfolio: Portfolio[] = [
         cover: Cover1,
         title: "Youtube Showcase",
         detail: {
-            image: [Cover1, P1Image1],
+            image: [Cover1, P1Image1, P1Image0, P1Image2, P1Image3, P1Image4, P1Image5, P1Image6, P1Image7, P1Image8, P1Image9],
             description: "Youtube Showcase - Channel Nihonggo Mantappu, ID. is a project I created to showcase a YouTube playlist, specifically focusing on 'Waseda Boys World Trip's Playlist'. The project aims to highlight video content using Google's YouTube API v3, emphasizing modern technology and informative design. It provides users with an easy and enjoyable way to navigate and consume content.",
             technology: [
                 { title: "Core Technologies", tecnology: ['Vue.js', 'Typescript', 'TailwindCSS'] },
