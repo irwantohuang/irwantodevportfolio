@@ -173,7 +173,7 @@ export const portfolio: Portfolio[] = [
     },
     {
         id: '36b696c8-dbd0-4773-b31d-c6fa8ed6f9bf',
-        category: ['UI Component'],
+        category: ['UI Components'],
         cover: Cover7,
         title: "Expanding Cards",
         detail: {
@@ -188,7 +188,7 @@ export const portfolio: Portfolio[] = [
     },
     {
         id: '0da52396-f274-4cdc-89ec-727ce790cfa8',
-        category: ['UI Component'],
+        category: ['UI Components'],
         cover: Cover8,
         title: "Login Form",
         detail: {
