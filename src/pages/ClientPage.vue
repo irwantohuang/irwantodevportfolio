@@ -6,9 +6,9 @@ import ButtonText from '../ui/common/ButtonText.vue';
 <template>
     <section id="client" class="relative z-30">
         <div class="container mx-auto py-[25px]">
-            <h1 class="text-4xl font-medium text-primary">Would you like to be my first client? 👀 🚀</h1>
+            <h1 class="text-4xl font-medium text-primary dark:text-primary-light">Would you like to be my first client? 👀 🚀</h1>
 
-            <p class="mt-12 text-2xl text-accent-200">🤓 Hit me up on:</p>
+            <p class="mt-12 text-2xl text-accent-200 dark:text-accent">🤓 Hit me up on:</p>
             <div class="flex flex-col max-w-md items-center gap-3 mt-4">
                 <template v-for="(contact, index) in contacts">
                     <ButtonText :outline="index % 2 !== 0" :order="true":name="contact.title" :icon="contact.icon" :link="contact.url" class="py-2"/>

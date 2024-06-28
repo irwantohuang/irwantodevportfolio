@@ -12,7 +12,7 @@ defineProps({
 
 <template>
     <div v-if="type === 'mobile'" class="flex gap-4 ">
-        <Icon class="min-w-[30px] min-h-[30px] text-xl bg-primary text-primary-light" icon="fa-brands fa-github" :link="github" />
+        <Icon class="min-w-[30px] min-h-[30px] text-xl bg-primary text-primary-light dark:bg-accent" icon="fa-brands fa-github" :link="github" />
         <Icon class="min-w-[30px] min-h-[30px] text-xl bg-accent-200 text-primary-light"
             icon="fa-solid fa-up-right-from-square" :link="livePreview" />
     </div>

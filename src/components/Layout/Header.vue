@@ -40,7 +40,7 @@ const toggleAppearance = () => {
 
             <div class="flex items-center justify-between h-full">
                 <div class="relative">
-                    <h1 class="text-xl font-semibold text-accent-200 dark:text-accent">{{ routeName }} {{ darkMode }} </h1>
+                    <h1 class="text-xl font-semibold text-accent-200 dark:text-accent">{{ routeName }}</h1>
                     <hr class="border-t-2 border-t-accent-200 dark:border-accent w-2/5">
                 </div>
 

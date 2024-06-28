@@ -32,9 +32,15 @@
 /* Swiper Styles */
 .swiper-button-prev, 
 .swiper-button-next {
-    @apply text-primary 
+    @apply text-primary dark:text-accent
 }
 
 .swiper-pagination-bullet {
-    @apply bg-primary
+    @apply bg-primary dark:bg-accent
+}
+
+
+/* Skeleton Colors */
+.skeleton {
+    @apply bg-primary-light-300 dark:bg-primary-dark-200 
 }
