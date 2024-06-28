@@ -11,7 +11,7 @@
     }
 
     body {
-        @apply bg-primary-light font-primary text-primary-dark
+        @apply bg-primary-light font-primary text-primary-dark dark:bg-primary-dark-400 dark:text-primary-light
     }
 }
 
@@ -21,7 +21,7 @@
 }
 
 .text-link {
-    @apply font-medium text-accent-200 transition-all duration-100 hover:text-primary
+    @apply font-medium text-accent-200 transition-all duration-100 hover:text-primary dark:text-accent dark:hover:text-primary-200
 }
 
 .btn {

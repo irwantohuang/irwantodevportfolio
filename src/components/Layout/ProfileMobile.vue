@@ -18,7 +18,7 @@ defineEmits([
 <template>
     <Teleport to="body">
         <Transition name="slide-right">
-            <div v-show="profileVisibility" class="lg:hidden h-full w-full bg-primary-light-200 z-[999] fixed inset-y-0 left-0">
+            <div v-show="profileVisibility" class="lg:hidden h-full w-full bg-primary-light-200 z-[999] fixed inset-y-0 left-0 dark:bg-primary-dark-300">
                 <ButtonIcon @click="$emit('toggleProfileVisibility')" :useBackground="true" icon="fa-solid fa-xmark"
                     class="absolute top-4 right-4 rounded-full" />
 

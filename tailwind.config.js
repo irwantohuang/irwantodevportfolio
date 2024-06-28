@@ -33,7 +33,10 @@ export default {
                 },
                 'primary-dark': {
                     DEFAULT: '#333333',
-                    '200': '#5c5c5c'
+                    '200': '#5c5c5c',
+                    '250': '#1E1E1E',
+                    '300': '#0F1C2E',
+                    '400': '#1f2b3e'
                 }
             },
             screens: {

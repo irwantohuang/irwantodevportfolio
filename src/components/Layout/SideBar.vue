@@ -9,7 +9,7 @@ import ProfileSocialMedia from '../Profile/ProfileSocialMedia.vue';
 <template>
 
     <aside class="hidden lg:flex w-1/4 xl:w-1/5 h-full bg-gray-500 rounded-xl overflow-hidden">
-        <div class="relative container mx-auto py-[25px] bg-primary-light-200">
+        <div class="relative container mx-auto py-[25px] bg-primary-light-200 dark:bg-primary-dark-300">
             <ProfileHeader :image="profile.profilePicture" :name="profile.name" :headline="profile.headline" />
 
             <HorizontalLine />

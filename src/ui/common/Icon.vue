@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-    <a :href="link" target="_blank" class="text-primary cursor-pointer transition-all duration-50 ease-in hover:text-primary-light hover:bg-primary-200 group-hover:bg-primary-200 group-hover:text-primary-light-200 flex items-center justify-center rounded-md shadow-inset">
+    <a :href="link" target="_blank" class="text-primary cursor-pointer transition-all duration-50 ease-in hover:text-primary-light hover:bg-primary-200 group-hover:bg-primary-200 group-hover:text-primary-light-200 flex items-center justify-center rounded-md shadow-inset dark:text-accent dark:shadow-none dark:bg-primary-dark-400 dark:hover:bg-primary-200 dark:hover:text-primary-light">
         <i v-if="type === 'devIcon'" :class="icon"></i>
         <fa-icon v-else :icon="icon" />
     </a>
