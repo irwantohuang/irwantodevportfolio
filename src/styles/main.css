@@ -24,6 +24,17 @@
     @apply font-medium text-accent transition-all duration-100 hover:text-accent-200
 }
 
-.btm {
+.btn {
     @apply transition-all duration-300 ease-in
+}
+
+
+/* Swiper Styles */
+.swiper-button-prev, 
+.swiper-button-next {
+    @apply text-primary 
+}
+
+.swiper-pagination-bullet {
+    @apply bg-primary
 }

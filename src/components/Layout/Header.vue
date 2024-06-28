@@ -7,7 +7,10 @@ import ButtonIcon from '../../ui/common/ButtonIcon.vue';
 import ProfileMobile from './ProfileMobile.vue';
 
 const route = useRoute()
-const routeName = computed(() => route.name)
+const routeName = computed(() => {
+    if (route.name === 'PortfolioDetail') return 'Portfolio'
+    else return route.name;
+})
 
 const menuVisibility = ref<boolean>(false);
 const toggleMenuVisibility = () => menuVisibility.value = !menuVisibility.value;

@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router';
 
 <template>
 
-    <main class="w-full h-full bg-primary-light-200 px-2 rounded-md overflow-scroll shadow-sm">
+    <main class="main w-full h-full bg-primary-light-200 rounded-md overflow-scroll shadow-sm">
         <RouterView />
     </main>
 

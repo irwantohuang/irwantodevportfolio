@@ -12,7 +12,7 @@ import MainView from './MainView.vue';
             <div class="flex gap-4 h-full">
                 <SideBar />
 
-                <div class="flex flex-col gap-2 lg:gap-4 h-full w-full">
+                <div class="relative flex flex-col gap-2 lg:gap-4 h-full w-full">
                     <Header />
                     <MainView />
                 </div>

@@ -21,9 +21,15 @@ export const routes = [
     {
         path: "/portfolio",
         name: "Portfolio",
-        component: () => import('../pages/PortfolioPage.vue')
-    }
-    ,
+        component: () => import('../pages/PortfolioPage.vue'),
+        children: [
+            {
+                path: ":id",
+                name: "PortfolioDetail",
+                component: () => import('../pages/PortfolioPage.vue')
+            }
+        ]
+    },
     {
         path: "/client",
         name: "Client",

@@ -6,12 +6,12 @@ defineProps({
 })
 
 defineEmits([
-    'changeActive'
+    'changeCategory'
 ])
 </script>
 
 <template>
     <div class="flex items-center flex-wrap gap-2">
-        <PillButton v-for="data in category" @click="$emit('changeActive', data)" :category="data" :isActive="activeCategory === data" />
+        <PillButton v-for="data in category" @click="$emit('changeCategory', data)" :category="data" :isActive="activeCategory === data" />
     </div>
 </template>

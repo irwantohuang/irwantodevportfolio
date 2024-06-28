@@ -11,7 +11,7 @@ import { services } from '../../data/services'
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
 
             <template v-for="service in services" :key="service.id">
-                <div class="bg-primary-light shadow-md rounded-md flex items-start p-4 gap-6 transition-all duration-100 ease-in hover:scale-[102%] border">
+                <div class="bg-primary-light group shadow-md rounded-md flex items-start p-4 gap-6 transition-all duration-100 ease-in hover:scale-[102%] border">
                     <Icon class="min-w-[50px] min-h-[50px] text-2xl" :icon="service.icon" />
 
                     <div class="flex flex-col">

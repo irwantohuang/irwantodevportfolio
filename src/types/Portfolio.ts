@@ -1,7 +1,7 @@
 import { PortfolioDetail } from "./PortfolioDetail";
 
 export interface Portfolio {
-    id: number,
+    id: string,
     cover: string,
     title: string,
     detail: PortfolioDetail

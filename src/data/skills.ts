@@ -29,8 +29,8 @@ export const skills: Skills[] = [
     { id: 17, group: "tool", name: "Trello", level: "Intermediate", icon: "devicon-trello-plain" },
 
     // Soft Skills
-    { id: 18, group: "soft skill", name: "Problem Solving", level: "", icon: "fa-solid fa-lightbulb" },
-    { id: 19, group: "soft skill", name: "Teamwork", level: "", icon: "fa-solid fa-people-group" },
-    { id: 20, group: "soft skill", name: "Time Management", level: "", icon: "fa-solid fa-timeline" },
+    { id: 18, group: "soft skill", name: "Problem Solving", level: "-", icon: "fa-solid fa-lightbulb" },
+    { id: 19, group: "soft skill", name: "Teamwork", level: "-", icon: "fa-solid fa-people-group" },
+    { id: 20, group: "soft skill", name: "Time Management", level: "-", icon: "fa-solid fa-timeline" },
     
 ]
