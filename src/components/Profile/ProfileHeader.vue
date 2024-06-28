@@ -10,7 +10,7 @@ defineProps({
 <template>
     <header class="flex flex-col items-center justify-center">
         <div
-            class="w-[150px] h-[150px] overflow-hidden rounded-md">
+            class="w-[150px] h-[150px] overflow-hidden rounded-full">
             <img :src="image" :alt="name" class="w-full h-full object-cover">
         </div>
 

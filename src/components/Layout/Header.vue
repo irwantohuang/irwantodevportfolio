@@ -25,7 +25,10 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
         <div class="container mx-auto h-full">
 
             <div class="flex items-center justify-between h-full">
-                <h1 class="text-lg font-semibold text-primary-dark-200">{{ routeName }}</h1>
+                <div class="relative">
+                    <h1 class="text-xl font-semibold text-accent-200">{{ routeName }}</h1>
+                    <hr class="border-t-2 border-t-accent-200 w-2/5">
+                </div>
 
                 <nav>
                     <div class="flex lg:hidden gap-2">
@@ -38,7 +41,7 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
                     <MenuMobile :menu="menu" :menuVisibility="menuVisibility" @toggle-menu-visibility="toggleMenuVisibility()"/>
                     <ProfileMobile :profileVisibility="profileVisibility" @toggle-profile-visibility="toggleProfileVisibility()" />
 
-                    <ul class="hidden lg:flex items-center justify-center gap-8 h-full border border-black px-4">
+                    <ul class="hidden lg:flex items-center justify-center gap-8 h-full px-4">
                         <li v-for="data in menu" :key="data.id">
                             <router-link :to="{ name: data.name }"
                                 class="font-semibold text-base transition-all duration-100 ease-in hover:text-accent-200"
