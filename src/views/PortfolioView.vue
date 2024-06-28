@@ -59,7 +59,7 @@ const getActiveCategory = (): Portfolio[] => {
                     <img :src="porto.cover" :alt="porto.title" class="w-full h-full object-cover object-top">
                 </div>
 
-                <h3 class="px-2 font-medium text-base text-primary group-hover:text-accent-200">{{ porto.title }}</h3>
+                <h2 class="px-2 font-medium text-base text-accent-200 group-hover:text-primary">{{ porto.title }}</h2>
             </div>
         </div>
     </div>

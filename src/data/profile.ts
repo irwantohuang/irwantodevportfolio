@@ -8,17 +8,20 @@ export const profile: Profile = {
     contact: [
         {
             title: "Email",
-            url: "irwanto.ng11@gmai.com",
+            name: "irwanto.ng11@gmail.com",
+            url: "#",
             icon: "fa-solid fa-envelope",
         },
         {
             title: "Phone",
-            url: "+62 822-8454-1764",
+            name: "+62 822-8454-1764",
+            url: "https://wa.me/6282284541764",
             icon: "fa-solid fa-phone",
         },
         {
             title: "Address",
-            url: "Jakarta, Indonesia",
+            name: "Jakarta, Indonesia",
+            url: "#",
             icon: "fa-solid fa-location-dot",           
         }
     ],
