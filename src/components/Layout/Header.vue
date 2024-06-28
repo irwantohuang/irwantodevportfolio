@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { menu } from '../../data/menu';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import MenuMobile from './MenuMobile.vue'
 import ButtonIcon from '../../ui/common/ButtonIcon.vue';
@@ -23,19 +23,35 @@ const darkMode = ref(true);
 const toggleAppearance = () => {
     darkMode.value = !darkMode.value;
     localStorage.appearance = darkMode.value ? 'dark' : 'light'
+    toggleBodyClass();
+}
 
+const toggleBodyClass = () => {
     const htmlElement = document.querySelector('html');
     if (htmlElement && darkMode) {
         htmlElement.classList.toggle('dark', darkMode.value);
     }
 }
 
+const getAppearance = () => {
+    if (localStorage.appearance === 'dark' || (!('appearance' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        darkMode.value = true;
+        toggleBodyClass();
+    } else {
+        darkMode.value = false
+    }
+}
+
+onMounted(() => {
+    getAppearance()
+})
 
 </script>
 
 <template>
 
-    <header class="w-full h-[60px] lg:h-[75px] px-2 rounded-md overflow-hidden bg-primary-light-200 dark:bg-primary-dark-300 shadow-sm">
+    <header
+        class="w-full h-[60px] lg:h-[75px] px-2 rounded-md overflow-hidden bg-primary-light-200 dark:bg-primary-dark-300 shadow-sm">
         <div class="container mx-auto h-full">
 
             <div class="flex items-center justify-between h-full">
