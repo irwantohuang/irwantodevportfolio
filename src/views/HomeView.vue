@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Experiences from '../components/About/Experiences.vue';
-import Services from '../components/About/Services.vue'
+import Experiences from '../components/Home/Experiences.vue';
+import Services from '../components/Home/Services.vue'
 import HorizontalLine from '../ui/common/HorizontalLine.vue';
 import TextSkeleton from '../components/Skeleton/TextSkeleton.vue'
 import { computed } from 'vue';
@@ -21,7 +21,6 @@ const globalLoader = computed(() => store.state.loader.loader)
 
 
         <HorizontalLine />
-        <!-- <CardSkeleton v-if="globalLoader" /> -->
         <Services :globalLoader="globalLoader"/>
 
         <HorizontalLine />

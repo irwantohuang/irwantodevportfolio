@@ -1,20 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { store } from '../store/store';
-
-
-const d = computed(() => store.state.data.data.age)
-
-const addAge = () => {
-    store.dispatch('data/increaseAge',)
-}
-
+import HomeView from '../views/HomeView.vue'
 </script>
 
 <template>
-    <h1>Home Page</h1>
 
+    <section id="about" class="relative z-30">
+        <HomeView />
+    </section>
 
-    <p>{{ d }}</p>
-    <button @click="addAge()">tes</button>
 </template>

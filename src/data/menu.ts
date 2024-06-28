@@ -5,28 +5,22 @@ export const menu: Menu[] = [
         id: 1,
         name: "Home",
         link: "/home",
-        icon: "fa-solid fa-home"
-    },
-    {
-        id: 2,
-        name: "About",
-        link: "/about",
         icon: "fa-solid fa-circle-info"
     },
     {
-        id: 3,
+        id: 2,
         name: "Skill",
         link: "/skill",
         icon: "fa-solid fa-gear"
     },
     {
-        id: 4,
+        id: 3,
         name: "Portfolio",
         link: "/portfolio",
         icon: "fa-solid fa-briefcase"
     },
     {
-        id: 5,
+        id: 4,
         name: "Client",
         link: "/client",
         icon: "fa-solid fa-users"
