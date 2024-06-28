@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router';
 import MenuMobile from './MenuMobile.vue'
 import ButtonIcon from '../../ui/common/ButtonIcon.vue';
 import ProfileMobile from './ProfileMobile.vue';
+import Overlay from './Overlay.vue'
 
 const route = useRoute()
 const routeName = computed(() => {
@@ -63,13 +64,9 @@ onMounted(() => {
                 <nav class="flex h-full gap-4 items-center">
                     <div class="flex lg:hidden gap-2">
                         <ButtonIcon @click="toggleProfileVisibility()" icon="fa-solid fa-user" />
-
-                        <ButtonIcon v-if="menuVisibility" @click="toggleMenuVisibility()" icon="fa-solid fa-xmark"
-                            :useBackground="true" />
-                        <ButtonIcon v-else @click="toggleMenuVisibility()" icon="fa-solid fa-border-all" />
+                        <ButtonIcon @click="toggleMenuVisibility()" icon="fa-solid fa-border-all" />
                         <ButtonIcon @click="toggleAppearance()" class="order-2"
                             :icon="darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" />
-
                     </div>
 
                     <ButtonIcon @click="toggleAppearance()" class="order-2 hidden lg:flex"
@@ -77,6 +74,7 @@ onMounted(() => {
 
                     <MenuMobile :menu="menu" :menuVisibility="menuVisibility"
                         @toggle-menu-visibility="toggleMenuVisibility()" />
+                    <Overlay :active="menuVisibility" @toggle-menu-visibility="toggleMenuVisibility()" />
                     <ProfileMobile :profileVisibility="profileVisibility"
                         @toggle-profile-visibility="toggleProfileVisibility()" />
 
