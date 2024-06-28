@@ -11,7 +11,7 @@ import CategorySkeleton from '../components/Skeleton/CategorySkeleton.vue'
 
 
 const category = ref(
-    ['all', 'language', 'framework', 'database', 'concepts', 'soft skill']
+    ['all', 'language', 'framework', 'database', 'concepts', 'tools', 'soft skill']
 )
 const activeCategory = ref('all');
 const loader = ref(false);
@@ -26,8 +26,8 @@ const changeActive = (e: string) => {
 };
 
 const checkType = (e: string) => {
-    if (e === 'concepts' || e === 'soft skill') return ''
-    else return 'devIcon'
+    if (e.includes('devicon')) return 'devIcon'
+    else return ''
 }
 
 const showSkill = (): Skills[] => {
@@ -47,7 +47,7 @@ const showSkill = (): Skills[] => {
 
         <div v-else class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
             <template v-for="skill in showSkill()" :key="skill.id" >
-                <SkillContent :skill="skill" :iconType="checkType(skill.group)" />
+                <SkillContent :skill="skill" :iconType="checkType(skill.icon)" />
             </template>
         </div>
     </div>

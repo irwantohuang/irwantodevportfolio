@@ -23,10 +23,11 @@ export const skills: Skills[] = [
     { id: 13, group: "concepts", name: "RESTful APIs", level: "Intermediate", icon: "fa-solid fa-code" },
 
     // Tools
-    { id: 14, group: "tool", name: "Git", level: "Intermediate", icon: "devicon-git-plain" },
-    { id: 15, group: "tool", name: "Swagger", level: "Intermediate", icon: "devicon-swagger-plain" },
-    { id: 16, group: "tool", name: "Postman", level: "Advanced", icon: "devicon-postman-plain" },
-    { id: 17, group: "tool", name: "Trello", level: "Intermediate", icon: "devicon-trello-plain" },
+    { id: 14, group: "tools", name: "Git", level: "Intermediate", icon: "devicon-git-plain" },
+    { id: 15, group: "tools", name: "Swagger", level: "Intermediate", icon: "devicon-swagger-plain" },
+    { id: 16, group: "tools", name: "Postman", level: "Advanced", icon: "devicon-postman-plain" },
+    { id: 17, group: "tools", name: "Trello", level: "Intermediate", icon: "devicon-trello-plain" },
+    { id: 17, group: "tools", name: "Excel", level: "Intermediate", icon: "fa-solid fa-file-excel" },
 
     // Soft Skills
     { id: 18, group: "soft skill", name: "Problem Solving", level: "-", icon: "fa-solid fa-lightbulb" },

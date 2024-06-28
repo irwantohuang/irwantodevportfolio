@@ -8,10 +8,22 @@ export const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    store.dispatch("loader/startLoading")
-    next();
-})
+    const shouldShowLoader =
+        (to.name === 'PortfolioDetail' && from.name === 'Portfolio') ||
+        (to.name === 'Portfolio' && from.name === 'PortfolioDetail');
 
-router.afterEach(() => {
-    store.dispatch("loader/endLoading")
-})
+    if (!shouldShowLoader) {
+        store.dispatch("loader/startLoading");
+    }
+    next();
+});
+
+router.afterEach((to, from) => {
+    const shouldShowLoader =
+        (to.name === 'PortfolioDetail' && from.name === 'Portfolio') ||
+        (to.name === 'Portfolio' && from.name === 'PortfolioDetail');
+
+    if (!shouldShowLoader) {
+        store.dispatch("loader/endLoading");
+    }
+});   
