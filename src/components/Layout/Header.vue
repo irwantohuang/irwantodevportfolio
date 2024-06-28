@@ -22,7 +22,7 @@ const toggleProfileVisibility = () => profileVisibility.value = !profileVisibili
 const darkMode = ref(true);
 const toggleAppearance = () => {
     darkMode.value = !darkMode.value;
-    localStorage.appearance = darkMode.value ? 'dark' : 'white'
+    localStorage.appearance = darkMode.value ? 'dark' : 'light'
 
     const htmlElement = document.querySelector('html');
     if (htmlElement && darkMode) {
