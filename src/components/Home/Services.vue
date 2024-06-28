@@ -12,7 +12,7 @@ import TextSkeleton from '../Skeleton/TextSkeleton.vue';
 
     <div class="mt-8">
         <TextSkeleton :title="true" v-if="globalLoader" />
-        <h3 v-else class="text-title text-2xl font-semibold text-primary">What I Do</h3>
+        <h1 v-else class="text-title text-2xl font-semibold text-primary">What I Do</h1>
 
 
         <CardSkeleton v-if="globalLoader"/>
@@ -22,8 +22,8 @@ import TextSkeleton from '../Skeleton/TextSkeleton.vue';
                     <Icon class="min-w-[50px] min-h-[50px] text-2xl" :icon="service.icon" />
 
                     <div class="flex flex-col">
-                        <h3 class="font-semibold text-lg md:text-base lg:text-lg text-primary uppercase">{{ service.title }}</h3>
-                        <p class="font-normal text-sm md:text-xs lg:text-sm text-justify text-primary-dark-200/65">{{ service.description }}</p>
+                        <h2 class="font-semibold text-lg md:text-base lg:text-lg text-primary uppercase">{{ service.title }}</h2>
+                        <p class="font-normal text-sm md:text-xs lg:text-sm text-justify text-primary-dark-200/85">{{ service.description }}</p>
                     </div>
                 </div>
             </template>

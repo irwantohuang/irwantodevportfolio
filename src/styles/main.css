@@ -21,7 +21,7 @@
 }
 
 .text-link {
-    @apply font-medium text-accent transition-all duration-100 hover:text-accent-200
+    @apply font-medium text-accent-200 transition-all duration-100 hover:text-primary
 }
 
 .btn {
