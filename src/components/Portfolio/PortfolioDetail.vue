@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { Portfolio } from '../../types/Portfolio';
-import ButtonIcon from '../../ui/common/ButtonIcon.vue';
 import HorizontalLine from '../../ui/common/HorizontalLine.vue';
 import PortfolioLink from './PortfolioLink.vue'
 import PortfolioTech from './PortfolioTech.vue'
 import SwiperImage from '../Swiper/SwiperImage.vue'
+import Icon from '../../ui/common/Icon.vue';
 
 defineProps({
     showDetailModal: Boolean,
@@ -20,8 +20,7 @@ defineEmits([
     <div class="rounded-md h-full w-full absolute inset-x-0 bottom-0 shadow-md bg-primary-light-200 dark:bg-primary-dark-300">
         <div class="container mx-auto py-[25px] h-full overflow-scroll">
             <div class="absolute -top-3.5 -right-3 z-[99]">
-                <ButtonIcon @click="$emit('toggleDetailModal', null, 'close')" :useBackground="true"
-                    icon="fa-solid fa-xmark" />
+                <Icon @click="$emit('toggleDetailModal', null, 'close')" class="icon-default min-h-[35px] min-w-[35px] text-3xl icon-default icon-bg" icon="fa-solid fa-xmark" />
             </div>
 
             <div class="flex flex-col lg:flex-row gap-4 overflow-scroll">

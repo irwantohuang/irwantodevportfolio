@@ -8,8 +8,8 @@ defineProps({
 
 <template>
     <section id="contact" class="flex flex-col gap-6">
-        <div v-for="data in contact" class="flex items-center h-auto gap-4 lg:gap-1.5">
-            <Icon class="z-[99] min-w-[45px] min-h-[45px] md:min-w-[50px] md:min-h-[50px] lg:min-w-[40px] lg:min-h-[40px] lg:text-xl md:text-2xl text-xl dark:bg-primary-dark-400" :icon="data.icon" :link="data.url"/>
+        <div v-for="data in contact" class="group flex items-center h-auto gap-4 lg:gap-1.5">
+            <Icon class="icon-primary icon-default z-99 min-w-[45px] min-h-[45px] lg:min-w-[40px] lg:min-h-[40px] text-xl" :icon="data.icon" />
 
             <div class="flex flex-col h-full justify-between">
                 <h3 class="text-xs md:text-sm lg:text-xs font-bold text-primary-dark-200/50 dark:text-primary-light/75 uppercase">{{ data.title }}</h3>

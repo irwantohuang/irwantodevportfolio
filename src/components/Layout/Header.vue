@@ -3,9 +3,10 @@ import { menu } from '../../data/menu';
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import MenuMobile from './MenuMobile.vue'
-import ButtonIcon from '../../ui/common/ButtonIcon.vue';
 import ProfileMobile from './ProfileMobile.vue';
 import Overlay from './Overlay.vue'
+import Icon from '../../ui/common/Icon.vue';
+
 
 const route = useRoute()
 const routeName = computed(() => {
@@ -47,6 +48,13 @@ onMounted(() => {
     getAppearance()
 })
 
+
+const buttons = ref([
+    { id: 1, icon: 'fa-solid fa-user', onClick: () => toggleProfileVisibility() },
+    { id: 2, icon: 'fa-solid fa-border-all', onClick: () => toggleMenuVisibility() },
+    { id: 3, icon: darkMode.value ? 'fa-solid fa-moon' : 'fa-solid fa-sun', onClick: () => toggleAppearance() },
+])
+
 </script>
 
 <template>
@@ -62,15 +70,13 @@ onMounted(() => {
                 </div>
 
                 <nav class="flex h-full gap-4 items-center">
-                    <div class="flex lg:hidden gap-2">
-                        <ButtonIcon @click="toggleProfileVisibility()" icon="fa-solid fa-user" />
-                        <ButtonIcon @click="toggleMenuVisibility()" icon="fa-solid fa-border-all" />
-                        <ButtonIcon @click="toggleAppearance()" class="order-2"
-                            :icon="darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" />
+                    <div class="flex order-2 gap-2">
+                        <Icon v-for="button in buttons" @click="button.onClick"
+                            class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline"
+                            :class="button.id === 3 ? '' : 'lg:hidden'"
+                            :icon="button.icon" /> 
                     </div>
 
-                    <ButtonIcon @click="toggleAppearance()" class="order-2 hidden lg:flex"
-                        :icon="darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" />
 
                     <MenuMobile :menu="menu" :menuVisibility="menuVisibility"
                         @toggle-menu-visibility="toggleMenuVisibility()" />

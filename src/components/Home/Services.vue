@@ -19,7 +19,7 @@ import TextSkeleton from '../Skeleton/TextSkeleton.vue';
         <div v-else class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
             <template v-for="service in services" :key="service.id">
                 <div class="bg-primary-light dark:bg-primary-dark-400 group shadow-md rounded-md flex items-start p-4 gap-6 transition-all duration-100 ease-in hover:scale-[102%] ">
-                    <Icon class="min-w-[50px] min-h-[50px] text-2xl" :icon="service.icon" />
+                    <Icon class="icon-secondary icon-default icon-default-size text-2xl" :icon="service.icon" />
 
                     <div class="flex flex-col">
                         <h2 class="font-semibold text-lg md:text-base lg:text-lg text-primary dark:text-accent uppercase">{{ service.title }}</h2>
