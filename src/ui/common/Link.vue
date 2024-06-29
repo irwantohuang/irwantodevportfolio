@@ -14,18 +14,3 @@ defineProps({
         <slot></slot>
     </a>
 </template>
-
-
-<style>
-    .btn-primary {
-        @apply bg-primary text-primary-light hover:bg-accent-200
-                dark:bg-accent dark:text-primary-dark-400
-                dark:hover:bg-primary dark:hover:text-primary-light
-    }
-
-    .btn-outline {
-        @apply border border-primary hover:bg-primary/25
-                dark:border-accent dark:hover:bg-accent/25
-    }
-
-</style>
