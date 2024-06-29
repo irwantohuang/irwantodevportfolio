@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PillButton from '../../ui/PillButton.vue'
+import PillButton from '../../ui/common/PillButton.vue'
 defineProps({
     category: Array as () => string[],
     activeCategory: String,

@@ -1,20 +1,11 @@
 <script setup lang="ts">
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
-import { ref, watch } from 'vue';
-const props = defineProps({
+import { ref } from 'vue';
+defineProps({
     detail: Object
 })
 const modules = [Autoplay, Pagination, Navigation];
-
 const swiperRef = ref(null);
-
-watch(() => props.detail, (newVal) => {
-    if (newVal) {
-        console.log("hello world", newVal);
-        console.log(swiperRef.value)
-        
-    }
-})
 
 </script>
 

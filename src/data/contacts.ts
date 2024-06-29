@@ -9,7 +9,7 @@ export const contacts: Contact[] = [
     },
     {
         title: "Email",
-        name: "Irwanto Huang",
+        name: "irwanto.ng11@gmail.com",
         url: "#",
         icon: "fa-solid fa-envelope"
     },
