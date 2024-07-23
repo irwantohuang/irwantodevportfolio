@@ -13,6 +13,6 @@ export const experience: Experience[] = [
         company: "CV. Teknik Steel",
         position: "Marketing Officer",
         startDate: "March 2021",
-        endDate: "February 2024"
+        endDate: "February 2023"
     }
 ]
