@@ -3,8 +3,8 @@ import { Menu } from "../types/Menu";
 export const menu: Menu[] = [
     {
         id: 1,
-        name: "Home",
-        link: "/home",
+        name: "About",
+        link: "/about",
         icon: "fa-solid fa-circle-info"
     },
     {
@@ -18,11 +18,11 @@ export const menu: Menu[] = [
         name: "Portfolio",
         link: "/portfolio",
         icon: "fa-solid fa-briefcase"
-    },
-    {
-        id: 4,
-        name: "Client",
-        link: "/client",
-        icon: "fa-solid fa-users"
     }
+    // {
+    //     id: 4,
+    //     name: "Client",
+    //     link: "/client",
+    //     icon: "fa-solid fa-users"
+    // }
 ]
