@@ -18,12 +18,12 @@ defineEmits([
 
 <template>
     <div class="rounded-md h-full w-full absolute inset-x-0 bottom-0 shadow-md bg-primary-light-200 dark:bg-primary-dark-300">
-        <div class="container mx-auto py-[25px] h-full overflow-y-scroll overflow-x-hidden">
+        <div class="container mx-auto py-[25px] h-full scrollbar overflow-y-scroll overflow-x-hidden">
             <div class="absolute -top-3.5 -right-3 z-[99]">
                 <Icon @click="$emit('toggleDetailModal', null, 'close')" class="icon-default min-h-[35px] min-w-[35px] text-3xl icon-default icon-bg" icon="fa-solid fa-xmark" />
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-4 overflow-y-auto overflow-x-hidden">
+            <div class="flex flex-col lg:flex-row gap-4 overflow-y-auto scrollbar overflow-x-hidden">
                 <div class="w-full h-full md:w-full lg:w-2/3 rounded-md overflow-hidden">
                     <SwiperImage :detail="portfolioDetail?.detail.image" />
                 </div>
