@@ -19,8 +19,8 @@ const toggleDetailModal = (id: string, type: string) => {
     if (type === 'open') router.push({ name: 'PortfolioDetail', params: {id} })
     else router.push({ name: 'Portfolio' })
     showDetailModal.value = !showDetailModal.value;
-    const main = document.querySelector('.main') as HTMLElement
-    main.style.overflow = type === 'open' ? 'hidden' : 'scroll'
+    // const main = document.querySelector('.main') as HTMLElement
+    // main.style.overflow = type === 'open' ? 'hidden' : 'scroll'
     portfolioDetail.value = portfolio.find(e => e.id === id);
 }
 
