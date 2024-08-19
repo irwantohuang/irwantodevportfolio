@@ -13,8 +13,8 @@ defineProps({
 
             <div class="flex flex-col h-full justify-between">
                 <h3 class="text-xs md:text-sm lg:text-xs font-bold text-primary-dark-200/50 dark:text-primary-light/75 uppercase">{{ data.title }}</h3>
-                <a :href="data.url" target="_blank"
-                    class="text-sm md:text-base lg:text-[11px] text-link overflow-hidden text-ellipsis">{{ data.name }}</a>
+                <a :href="data.url"
+                    class="pointer-event-none text-sm md:text-base lg:text-[11px] text-link overflow-hidden text-ellipsis">{{ data.name }}</a>
             </div>
         </div>
     </section>

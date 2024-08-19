@@ -13,7 +13,7 @@ defineProps({
         <Icon class="icon-default icon-default-size icon-primary text-3xl" :icon="skill?.icon" :type="iconType"/>
 
         <div class="flex flex-col gap-1">
-            <h2 class="font-semibold text-accent-200 dark:text-accent group-hover:text-primary text-sm md:text-base">{{ skill?.name }}</h2>
+            <h2 class="font-semibold text-accent-200 dark:text-accent group-hover:text-primary dark:group-hover:text-accent text-sm md:text-base">{{ skill?.name }}</h2>
             <p class="font-medium text-primary-dark-200/90 dark:text-primary-light-200/75 group-hover:text-primary-dark dark:group-hover:text-primary-light-200 text-xs md:text-sm">{{ skill?.level }}</p>
         </div>
     </div>

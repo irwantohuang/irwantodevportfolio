@@ -11,7 +11,7 @@ import CategorySkeleton from '../components/Skeleton/CategorySkeleton.vue'
 
 
 const category = ref(
-    ['all', 'language', 'framework', 'database', 'concepts', 'tools', 'soft skill']
+    ['all', 'language', 'framework', 'database', 'concepts', 'tools']
 )
 const activeCategory = ref('all');
 const loader = ref(false);

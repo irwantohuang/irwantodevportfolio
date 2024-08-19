@@ -5,8 +5,6 @@ import TextSkeleton from '../Skeleton/TextSkeleton.vue';
 defineProps({
     globalLoader: Boolean
 })
-
-
 </script>
 
 <template>
@@ -14,8 +12,26 @@ defineProps({
         <TextSkeleton v-if="globalLoader" :title="true" />
         <h1 v-else class="text-title text-2xl font-semibold text-primary dark:text-accent">Experiences</h1>
 
+        <div class="mt-6 flex flex-col gap-2">
+            <div v-for="exp in experience" :key="exp.id" class="p-4 rounded transition-all duration-150 hover:bg-primary-light hover:-translate-y-1 hover:shadow-md dark:hover:bg-primary-dark-400">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded bg-primary text-primary-light dark:bg-accent">
+                            <fa-icon :icon="exp.icon" class="text-2xl"/>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="font-medium text-primary dark:text-accent">{{ exp.company }}</span>
+                            <span class="font-normal text-primary-dark-200/75 dark:text-primary-light-200/75">{{ exp.position }}</span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="font-medium text-primary-dark/50 dark:text-primary-light/65">{{ exp.startDate }} - {{ exp.endDate }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="mt-6 border-l-2 border-black dark:border-primary-light pt-4 pb-2 md:max-w-md lg:max-w-lg">
+        <!-- <div class="mt-6 border-l-2 border-black dark:border-primary-light pt-4 pb-2 md:max-w-md lg:max-w-lg">
             <div v-for="exp in experience" :key="exp.id" class="mb-8 relative flex items-start flex-col gap-6">
                 <fa-icon icon="fa-solid fa-circle" class="absolute -left-[9px] top-1" />
                 <div class="pl-8 flex flex-col w-full">
@@ -35,6 +51,6 @@ defineProps({
                     <h3 v-else class="font-medium text-base text-accent-200 dark:text-accent">{{ exp.company }}</h3>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>

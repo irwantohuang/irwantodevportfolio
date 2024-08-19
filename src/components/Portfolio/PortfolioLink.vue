@@ -24,7 +24,7 @@ const redirectTo = (url?: string) => window.open(url, "_blank")
     </div>
 
     <div v-if="type === 'desktop'" class="flex flex-col gap-2 w-full items-start mt-4">
-        <Link v-for="link in links" :url="link.url" :class="link.id === 1 ? 'btn-primary' : 'btn-outline'">
+        <Link v-for="link in links" :url="link.url" :class="link.id === 1 ? 'btn-primary rounded-full' : 'btn-outline rounded-full'">
             <slot>
                 {{ link.name }}
                 <fa-icon :icon="link.icon" />

@@ -27,7 +27,7 @@ const toggleDetailModal = (id: string, type: string) => {
 const globalLoader = computed(() => store.state.loader.loader);
 
 // Show by Category
-const portfolioCategories = ref(['All', 'Web Development', 'Cloning', 'UI Components'])
+const portfolioCategories = ref(['All', 'Web Development', 'Cloning'])
 const activeCategory = ref("All");
 const loader = ref(false);
 const changeCategory = (e: string) => {

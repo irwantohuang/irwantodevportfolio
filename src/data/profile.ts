@@ -1,5 +1,6 @@
 import { Profile } from "../types/Profile";
-import ProfilePicture from '../assets/profile-picture-2.jpeg'
+// import ProfilePicture from '../assets/profile-picture-2.jpeg'
+import ProfilePicture from '../assets/pp.jpeg'
 
 export const profile: Profile = {
     name: "Irwanto Huang",
@@ -13,13 +14,7 @@ export const profile: Profile = {
             icon: "fa-solid fa-envelope",
         },
         {
-            title: "Phone",
-            name: "+62 822-8454-1764",
-            url: "https://wa.me/6282284541764",
-            icon: "fa-solid fa-phone",
-        },
-        {
-            title: "Address",
+            title: "Location",
             name: "Jakarta, Indonesia",
             url: "#",
             icon: "fa-solid fa-location-dot",           
@@ -33,10 +28,6 @@ export const profile: Profile = {
         {
             url: "https://github.com/irwantohuang",
             icon: "fa-brands fa-github",
-        },
-        {
-            url: "https://www.instagram.com/irwanto.ng/",
-            icon: "fa-brands fa-instagram",
         }
     ]
 }

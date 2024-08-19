@@ -91,21 +91,21 @@ export const portfolio: Portfolio[] = [
             githubLink: "https://github.com/irwantohuang/nihonggo-mantappu-showcase"
         }
     },
-    {
-        id: 'ddfac99c-4a50-4b37-bcc5-025bb25baeb0',
-        category: ['Web Development'],
-        cover: Cover2,
-        title: "Academia Connect",
-        detail: {
-            image: [Cover2, P2Image1, P2Image2, P2Image3, P2Image4, P2Image5],
-            description: "Academia is an innovative educational platform designed to revolutionize learning experiences. It serves as a centralized hub for students, educators, and institutions alike, offering a dynamic ecosystem that fosters collaboration, knowledge-sharing, and personal growth.",
-            technology: [
-                { title: "Core Technologies", tecnology: ['Vue.js', 'TailwindCSS'] },
-            ],
-            livePreview: "https://academiaconnect.netlify.app/",
-            githubLink: "https://github.com/irwantohuang/academia"
-        }
-    },
+    // {
+    //     id: 'ddfac99c-4a50-4b37-bcc5-025bb25baeb0',
+    //     category: ['Web Development'],
+    //     cover: Cover2,
+    //     title: "Academia Connect",
+    //     detail: {
+    //         image: [Cover2, P2Image1, P2Image2, P2Image3, P2Image4, P2Image5],
+    //         description: "Academia is an innovative educational platform designed to revolutionize learning experiences. It serves as a centralized hub for students, educators, and institutions alike, offering a dynamic ecosystem that fosters collaboration, knowledge-sharing, and personal growth.",
+    //         technology: [
+    //             { title: "Core Technologies", tecnology: ['Vue.js', 'TailwindCSS'] },
+    //         ],
+    //         livePreview: "https://academiaconnect.netlify.app/",
+    //         githubLink: "https://github.com/irwantohuang/academia"
+    //     }
+    // },
     {
         id: '13aad3fc-bb28-45a6-9c4d-fb1a0882a1e5',
         category: ['Web Development', 'Cloning'],
@@ -138,23 +138,23 @@ export const portfolio: Portfolio[] = [
             githubLink: "https://github.com/irwantohuang/interno"
         }
     },
-    {
-        id: 'd1d10a41-87d3-45c2-a5ff-61607e33fceb',
-        category: ['Web Development'],
-        cover: Cover5,
-        title: "Miracell Safety",
-        detail: {
-            image: [Cover5, P5Image1, P5Image2, P5Image3, P5Image4, P5Image5 ],
-            description: "This is a landing page for Miracell Safety. an online safety shoe store. The goal was to create an attractive and responsive layout so visitors can easily explore the products offered.",
-            technology: [
-                { title: "Core Technologies", tecnology: ['HTML', 'CSS', 'Javascript'] },
-                { title: "Libraries and Framework", tecnology: ['Swiper', 'Font Awesome'] },
+    // {
+    //     id: 'd1d10a41-87d3-45c2-a5ff-61607e33fceb',
+    //     category: ['Web Development'],
+    //     cover: Cover5,
+    //     title: "Miracell Safety",
+    //     detail: {
+    //         image: [Cover5, P5Image1, P5Image2, P5Image3, P5Image4, P5Image5 ],
+    //         description: "This is a landing page for Miracell Safety. an online safety shoe store. The goal was to create an attractive and responsive layout so visitors can easily explore the products offered.",
+    //         technology: [
+    //             { title: "Core Technologies", tecnology: ['HTML', 'CSS', 'Javascript'] },
+    //             { title: "Libraries and Framework", tecnology: ['Swiper', 'Font Awesome'] },
 
-            ],
-            livePreview: "https://irwantohuang.github.io/miracell-web/",
-            githubLink: "https://github.com/irwantohuang/miracell-web"
-        }
-    },
+    //         ],
+    //         livePreview: "https://irwantohuang.github.io/miracell-web/",
+    //         githubLink: "https://github.com/irwantohuang/miracell-web"
+    //     }
+    // },
     {
         id: '4b3d2845-39ca-4153-8915-5bb0f0e57411',
         category: ['Web Development'],
@@ -171,34 +171,34 @@ export const portfolio: Portfolio[] = [
             githubLink: "https://github.com/irwantohuang/portfolio-vue-tailwind"
         }
     },
-    {
-        id: '36b696c8-dbd0-4773-b31d-c6fa8ed6f9bf',
-        category: ['UI Components'],
-        cover: Cover7,
-        title: "Expanding Cards",
-        detail: {
-            image: [Cover7, P7Image1, P7Image2],
-            description: "A minimalist project showcasing interactive cards that expand and reveal content upon clicking. Built with HTML, CSS for styling, and JavaScript for functionality.",
-            technology: [
-                { title: "Core Technologies", tecnology: ['HTML', 'CSS', 'Javascript'] },
-            ],
-            livePreview: "https://irwantohuang.github.io/expanding-cards/",
-            githubLink: "https://github.com/irwantohuang/expanding-cards"
-        }
-    },
-    {
-        id: '0da52396-f274-4cdc-89ec-727ce790cfa8',
-        category: ['UI Components'],
-        cover: Cover8,
-        title: "Login Form",
-        detail: {
-            image: [Cover8, P8Image1, P8Image2, P8Image3],
-            description: "A basic login form project demonstrating front-end development skills with HTML for structure, CSS for styling, and JavaScript for form validation and interactivity.",
-            technology: [
-                { title: "Core Technologies", tecnology: ['HTML', 'CSS', 'Javascript'] },
-            ],
-            livePreview: "https://irwantohuang.github.io/login-form/",
-            githubLink: "https://github.com/irwantohuang/login-form"
-        }
-    },
+    // {
+    //     id: '36b696c8-dbd0-4773-b31d-c6fa8ed6f9bf',
+    //     category: ['UI Components'],
+    //     cover: Cover7,
+    //     title: "Expanding Cards",
+    //     detail: {
+    //         image: [Cover7, P7Image1, P7Image2],
+    //         description: "A minimalist project showcasing interactive cards that expand and reveal content upon clicking. Built with HTML, CSS for styling, and JavaScript for functionality.",
+    //         technology: [
+    //             { title: "Core Technologies", tecnology: ['HTML', 'CSS', 'Javascript'] },
+    //         ],
+    //         livePreview: "https://irwantohuang.github.io/expanding-cards/",
+    //         githubLink: "https://github.com/irwantohuang/expanding-cards"
+    //     }
+    // },
+    // {
+    //     id: '0da52396-f274-4cdc-89ec-727ce790cfa8',
+    //     category: ['UI Components'],
+    //     cover: Cover8,
+    //     title: "Login Form",
+    //     detail: {
+    //         image: [Cover8, P8Image1, P8Image2, P8Image3],
+    //         description: "A basic login form project demonstrating front-end development skills with HTML for structure, CSS for styling, and JavaScript for form validation and interactivity.",
+    //         technology: [
+    //             { title: "Core Technologies", tecnology: ['HTML', 'CSS', 'Javascript'] },
+    //         ],
+    //         livePreview: "https://irwantohuang.github.io/login-form/",
+    //         githubLink: "https://github.com/irwantohuang/login-form"
+    //     }
+    // },
 ]
