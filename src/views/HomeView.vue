@@ -12,16 +12,22 @@ const globalLoader = computed(() => store.state.loader.loader)
 
 <template>
     <div class="container mx-auto py-[25px] w-full h-full">
-        <TextSkeleton v-if="globalLoader"/>
+        <TextSkeleton v-if="globalLoader" />
         <template v-else>
-            <p class="text-sm md:text-base lg:text-lg text-justify">Hi! I'm 
-                <a href="#" class="text-link">Irwanto Huang</a>
-                , a Frontend Web Developer from Jakarta, Indonesia. With a keen eye for design and strong coding skills, I specialize in creating beautiful, responsive, and user-friendly website. I am proficient in HTML, CSS, Javascript, Typescript, Vue.js, TailwindCSS, and have experience with backend technologies such as Java and Spring Boot.</p>
+            <p class="text-base lg:text-lg lg:text-justify">
+                <span class="text-2xl lg:text-3xl">
+                    Hi! I'm
+                    <a href="#" class="text-link">Irwanto Huang.</a>
+                    a <span class="font-medium">Frontend Web Developer</span> from Jakarta, Indonesia.
+                </span>
+                With a keen eye for design and strong coding skills, I specialize in creating beautiful, responsive, and
+                user-friendly website.
+            </p>
         </template>
 
 
         <HorizontalLine />
-        <Services :globalLoader="globalLoader"/>
+        <Services :globalLoader="globalLoader" />
 
         <HorizontalLine />
         <Experiences :globalLoader="globalLoader" />
