@@ -1,9 +1,10 @@
 import { PortfolioDetail } from "./PortfolioDetail";
 
 export interface Portfolio {
-    id: string,
+    id: string | number,
     category: string[],
-    cover: string,
+    thumbnailUrl: string,
+    videoUrl: string,
     title: string,
-    detail: PortfolioDetail
+    portfolioDetail: PortfolioDetail
 }
