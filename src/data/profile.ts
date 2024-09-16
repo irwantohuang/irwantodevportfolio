@@ -1,6 +1,6 @@
 import { Profile } from "../types/Profile";
 // import ProfilePicture from '../assets/profile-picture-2.jpeg'
-import ProfilePicture from '../assets/pp.jpeg'
+import ProfilePicture from '../../public/assets/images/pp.jpeg'
 
 export const profile: Profile = {
     name: "Irwanto Huang",
