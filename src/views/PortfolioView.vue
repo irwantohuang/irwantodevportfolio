@@ -28,11 +28,51 @@ const getActiveCategory = (): Portfolio[] => {
 
 const onHoverContainer = ref<boolean[]>([]);
 const isAlreadyHover = ref<boolean[]>([]);
+// const videoRefs = ref<HTMLVideoElement[]>([]);
 
 const handleMouse = (isHovering: boolean, index: number) => {
     onHoverContainer.value[index] = isHovering;
     if (isHovering) {
+        // handlePlayVideo(index);
         isAlreadyHover.value[index] = isHovering;
+    }
+}
+
+// const handlePlayVideo = (index: number) => {
+//     const videoRef = videoRefs.value[index];
+//     if (!videoRef) return;
+
+//     console.log("Vide ref -> ", videoRef)
+//     if (onHoverContainer.value[index]) {
+//         videoRef.currentTime = 0;
+//         videoRef.play();
+//     } else {
+//         videoRef.pause()
+//     }
+// }
+
+const getColor = (tech: string) => {
+    switch (tech) {
+        case "React": 
+        case "react-router-dom":
+            return "bg-[#61DAFB] dark:text-primary-dark"; 
+        case "Typescript": return "bg-[#3178C6] text-primary-light";
+        case "Redux": return "bg-[#764ABC] text-primary-light";
+        case "Vue.js": 
+        case "Vuex":
+        case "Vue Router":
+            return "bg-[#42B883] text-primary-light";
+        case "Chart.js": return "bg-[#FF6384] text-primary-light";
+        case "Axios": return "bg-[#5A29E4] text-primary-light";
+        case "CoinRanking API": return "bg-[#0052FF] text-primary-light";
+        case "News API": return "bg-[#005A9C] text-primary-light";
+        case "TailwindCSS": return "bg-[#06B6D4] text-primary-light";
+        case "Swiper": return "bg-[#6332F6] text-primary-light";
+        case "Google APi v3": return "bg-[#FF0000] text-primary-light";
+        case "HTML": return "bg-[#E34F26] text-primary-light";
+        case "CSS": return "bg-[#1572B6] text-primary-light";
+        case "Javascript": return "bg-[#F7DF1E] dark:text-primary-dark";
+        default: return "bg-primary-dark-200 text-primary-light dark:bg-primary-light-300 dark:text-primary-dark-400"
     }
 }
 </script>
@@ -50,12 +90,12 @@ const handleMouse = (isHovering: boolean, index: number) => {
         <div v-else class="flex flex-col gap-6">
             <template v-for="(porto, index) in getActiveCategory()" :key="porto.id">
                 <div 
-                class="flex items-start flex-col xl:flex-row gap-x-4 gap-y-2 w-full p-2 transition-all group hover:shadow-md rounded border-primary" 
+                class="flex items-start flex-col xl:flex-row gap-x-4 gap-y-2 w-full p-2 transition-all group hover:shadow-md rounded" 
                 >
                 <div 
                     class="aspect-video w-full xl:max-w-[600px] flex-shrink-0 relative overflow-hidden transition-all duration-300 rounded" 
-                    @mouseenter="handleMouse(true, index)"
-                    @mouseleave="handleMouse(false, index)"
+                    @mouseenter="porto.videoUrl !== null ? handleMouse(true, index) : null"
+                    @mouseleave="porto.videoUrl !== null ? handleMouse(false, index) : null"
                 >
                     <img :src="porto.thumbnailUrl" alt="" class="w-full object-cover">
                     <iframe 
@@ -64,12 +104,10 @@ const handleMouse = (isHovering: boolean, index: number) => {
                         :class="onHoverContainer[index] ? 'opacity-100' : 'opacity-0'"
                         muted playsinline loop allowfullscreen>
                     </iframe>
-
                     <div 
                         class="absolute inset-0 z-1 flex items-center justify-center bg-primary-dark-250 bg-opacity-50 transition-opacity duration-300"
-                        :class="isAlreadyHover[index] ? 'opacity-0 pointer-events-none' : ''"
+                        :class="isAlreadyHover[index] || porto.videoUrl === null ? 'opacity-0 pointer-events-none' : ''"
                     >
-                        <span class="text-primary-light opacity-50 text-xl font-medium">Hover me</span>
                         <div class="absolute rounded-full border-4 border-white w-16 h-16 animate-ping"></div>
                         <div class="absolute rounded-full border-2 border-white w-28 h-28 animate-ping"></div>
                     </div>
@@ -79,7 +117,10 @@ const handleMouse = (isHovering: boolean, index: number) => {
                         <p class="text-2xl font-semibold text-primary-dark-400 group-hover:text-primary dark:text-accent dark:group-hover:text-primary-200">{{ porto.title }}</p>
                         <p class="text-sm line-clamp-[8] text-justify font-normal text-primary-dark-200 dark:text-primary-light-200 dark:group-hover:text-primary-light group-hover:text-primary-dark mt-2">{{ porto.portfolioDetail.description }}</p>
                         <div class="flex whitespace-nowrap flex-wrap gap-x-2 gap-y-1 mt-2">
-                            <p v-for="tech in porto.portfolioDetail.techStack" :key="tech" class="text-xs px-2.5 py-0.5 rounded bg-primary-dark-200 dark:bg-primary-light-300 dark:text-primary-dark-400 text-primary-light-200">
+                            <!-- <p v-for="tech in porto.portfolioDetail.techStack" :key="tech" class="text-xs px-2.5 py-0.5 rounded bg-primary-dark-200 dark:bg-primary-light-300 dark:text-primary-dark-400 text-primary-light-200">
+                                {{ tech }}
+                            </p> -->
+                            <p v-for="tech in porto.portfolioDetail.techStack" :key="tech" class="text-xs px-2.5 py-0.5 rounded" :class="getColor(tech)">
                                 {{ tech }}
                             </p>
                         </div>
