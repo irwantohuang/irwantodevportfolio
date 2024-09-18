@@ -2,9 +2,7 @@
 import { menu } from '../../data/menu';
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import MenuMobile from './MenuMobile.vue'
 import ProfileMobile from './ProfileMobile.vue';
-import Overlay from './Overlay.vue'
 import Icon from '../../ui/common/Icon.vue';
 
 
@@ -55,6 +53,8 @@ const buttons = ref([
     { id: 3, icon: darkMode.value ? 'fa-solid fa-moon' : 'fa-solid fa-sun', onClick: () => toggleAppearance() },
 ])
 
+
+
 </script>
 
 <template>
@@ -69,18 +69,30 @@ const buttons = ref([
                     <hr class="border-t-2 border-t-accent-200 dark:border-accent w-2/5">
                 </div>
 
-                <nav class="flex h-full gap-4 items-center">
-                    <div class="flex order-2 gap-2">
-                        <Icon v-for="button in buttons" @click="button.onClick"
-                            class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline"
-                            :class="button.id === 3 ? '' : 'lg:hidden'"
-                            :icon="button.icon" /> 
+                <nav class="relative flex h-full gap-4 items-center">
+
+                    <div class="order-2 h-[35px] overflow-hidden">
+                        <div class="flex gap-2 transition-all duration-1000 justify-end"
+                            :class="menuVisibility ? '-translate-y-full' : ''">
+                            <Icon v-for="button in buttons" @click="button.onClick"
+                                class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline"
+                                :class="button.id === 3 ? '' : 'lg:hidden'" :icon="button.icon" />
+                        </div>
+
+                        <div class="flex gap-2 transition-all duration-1000 lg:hidden"
+                            :class="menuVisibility ? '-translate-y-full' : 'translate-y-0'">
+                            <router-link v-for="e in menu" :to="e.link" @click="toggleMenuVisibility()">
+                                <Icon 
+                                    class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline" 
+                                    :icon="e.icon"/>
+                            </router-link>
+                            <Icon
+                                @click="toggleMenuVisibility()" 
+                                class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline" 
+                                icon="fa-solid fa-xmark"/>
+                        </div>
                     </div>
 
-
-                    <MenuMobile :menu="menu" :menuVisibility="menuVisibility"
-                        @toggle-menu-visibility="toggleMenuVisibility()" />
-                    <Overlay :active="menuVisibility" @toggle-menu-visibility="toggleMenuVisibility()" />
                     <ProfileMobile :profileVisibility="profileVisibility"
                         @toggle-profile-visibility="toggleProfileVisibility()" />
 

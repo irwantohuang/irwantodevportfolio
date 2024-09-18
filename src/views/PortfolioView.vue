@@ -133,6 +133,7 @@ const getColor = (tech: string) => {
             </div>
 
             <div className="container max-w-screen-sm mx-auto h-[1px] my-4 xl:hidden rounded-full bg-gradient-to-r from-primary via-purple-500 to-accent"></div>
+            
             </template>
         </div>
     </div>
