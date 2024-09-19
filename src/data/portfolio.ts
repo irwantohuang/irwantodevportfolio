@@ -31,7 +31,7 @@ export const portfolios: Portfolio[] = [
         portfolioDetail: {
             description: "YouTube Clone is an application that replicates the look and feel of YouTube. It features a video and playlist display, allowing users to easily browse through content. The application provides a streamlined viewing experience.",
             techStack: ["React", "Typescript", "TailwindCSS"],
-            liveUrl: "https://ytclonebyhuang.netlify.app",
+            liveUrl: "https://ytclonebyhuang.vercel.app/",
             githubUrl: "https://github.com/irwantohuang/youtube-clone"
         }
     },
