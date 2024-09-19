@@ -72,14 +72,14 @@ const buttons = ref([
                 <nav class="relative flex h-full gap-4 items-center">
 
                     <div class="order-2 h-[35px] overflow-hidden">
-                        <div class="flex gap-2 transition-all duration-1000 justify-end"
+                        <div class="flex gap-2 transition-all duration-500 justify-end"
                             :class="menuVisibility ? '-translate-y-full' : ''">
                             <Icon v-for="button in buttons" @click="button.onClick"
                                 class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline"
                                 :class="button.id === 3 ? '' : 'lg:hidden'" :icon="button.icon" />
                         </div>
 
-                        <div class="flex gap-2 transition-all duration-1000 lg:hidden"
+                        <div class="flex gap-2 transition-all duration-500 lg:hidden"
                             :class="menuVisibility ? '-translate-y-full' : 'translate-y-0'">
                             <router-link v-for="e in menu" :to="e.link" @click="toggleMenuVisibility()">
                                 <Icon 
