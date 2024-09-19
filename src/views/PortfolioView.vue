@@ -28,28 +28,13 @@ const getActiveCategory = (): Portfolio[] => {
 
 const onHoverContainer = ref<boolean[]>([]);
 const isAlreadyHover = ref<boolean[]>([]);
-// const videoRefs = ref<HTMLVideoElement[]>([]);
 
 const handleMouse = (isHovering: boolean, index: number) => {
     onHoverContainer.value[index] = isHovering;
     if (isHovering) {
-        // handlePlayVideo(index);
         isAlreadyHover.value[index] = isHovering;
     }
 }
-
-// const handlePlayVideo = (index: number) => {
-//     const videoRef = videoRefs.value[index];
-//     if (!videoRef) return;
-
-//     console.log("Vide ref -> ", videoRef)
-//     if (onHoverContainer.value[index]) {
-//         videoRef.currentTime = 0;
-//         videoRef.play();
-//     } else {
-//         videoRef.pause()
-//     }
-// }
 
 const getColor = (tech: string) => {
     switch (tech) {
@@ -93,7 +78,8 @@ const getColor = (tech: string) => {
                 class="flex items-start flex-col xl:flex-row gap-x-4 gap-y-2 w-full p-2 transition-all group hover:shadow-md rounded" 
                 >
                 <div 
-                    class="aspect-video w-full xl:max-w-[600px] flex-shrink-0 relative overflow-hidden transition-all duration-300 rounded" 
+                    class="aspect-video w-full flex-shrink-0 relative overflow-hidden transition-all duration-300 ease-in-out rounded"
+                    :class="onHoverContainer[index] ? 'xl:max-w-full' : 'xl:max-w-[600px]'" 
                     @mouseenter="porto.videoUrl !== null ? handleMouse(true, index) : null"
                     @mouseleave="porto.videoUrl !== null ? handleMouse(false, index) : null"
                 >
@@ -112,14 +98,12 @@ const getColor = (tech: string) => {
                         <div class="absolute rounded-full border-2 border-white w-28 h-28 animate-ping"></div>
                     </div>
                 </div>
-                <div class="flex-shrink flex w-full h-full justify-between items-center flex-col">
+                <div class="flex-shrink w-full h-full flex justify-between items-center flex-col transition-[opacity] delay-200 duration-300"
+                    :class="onHoverContainer[index] ? 'xl:opacity-0' : 'xl:opacity-100'">
                     <div>
                         <p class="text-2xl font-semibold text-primary-dark-400 group-hover:text-primary dark:text-accent dark:group-hover:text-primary-200">{{ porto.title }}</p>
                         <p class="text-sm line-clamp-[8] text-justify font-normal text-primary-dark-200 dark:text-primary-light-200 dark:group-hover:text-primary-light group-hover:text-primary-dark mt-2">{{ porto.portfolioDetail.description }}</p>
                         <div class="flex whitespace-nowrap flex-wrap gap-x-2 gap-y-1 mt-2">
-                            <!-- <p v-for="tech in porto.portfolioDetail.techStack" :key="tech" class="text-xs px-2.5 py-0.5 rounded bg-primary-dark-200 dark:bg-primary-light-300 dark:text-primary-dark-400 text-primary-light-200">
-                                {{ tech }}
-                            </p> -->
                             <p v-for="tech in porto.portfolioDetail.techStack" :key="tech" class="text-xs px-2.5 py-0.5 rounded" :class="getColor(tech)">
                                 {{ tech }}
                             </p>
