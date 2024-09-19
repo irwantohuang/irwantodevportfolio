@@ -83,7 +83,8 @@ const buttons = ref([
                             :class="menuVisibility ? '-translate-y-full' : 'translate-y-0'">
                             <router-link v-for="e in menu" :to="e.link" @click="toggleMenuVisibility()">
                                 <Icon 
-                                    class="w-[35px] h-[35px] text-2xl icon-non-bg icon-outline" 
+                                    class="w-[35px] h-[35px] text-2xl icon-outline" 
+                                    :class="routeName === e.name ? 'icon-bg' : 'icon-non-bg'"
                                     :icon="e.icon"/>
                             </router-link>
                             <Icon
