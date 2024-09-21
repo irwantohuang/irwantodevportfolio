@@ -19,8 +19,9 @@ defineEmits([
     <Teleport to="body">
         <Transition name="slide-right">
             <div v-show="profileVisibility" class="lg:hidden h-full w-full bg-primary-light-200 z-[999] fixed inset-y-0 left-0 dark:bg-primary-dark-300">
-                <Icon @click="$emit('toggleProfileVisibility')" class="icon-default min-h-[35px] min-w-[35px] text-3xl icon-default icon-bg absolute top-4 right-4" icon="fa-solid fa-xmark" />
-
+                <div class="absolute top-4 right-4">
+                    <Icon @click="$emit('toggleProfileVisibility')" class="icon-default  min-h-[35px] min-w-[35px] text-3xl icon-default icon-bg" icon="fa-solid fa-xmark" />
+                </div>
 
                 <div class="container mx-auto py-[55px] h-full">
                     <div class="relative h-full flex flex-col items-center">
