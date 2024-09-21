@@ -14,18 +14,18 @@ defineProps({
 
         <div class="mt-6 flex flex-col gap-2">
             <div v-for="exp in experience" :key="exp.id" class="p-4 rounded transition-all duration-150 hover:bg-primary-light hover:-translate-y-1 hover:shadow-md dark:hover:bg-primary-dark-400">
-                <div class="flex items-center justify-between">
+                <div class="flex sm:flex-row sm:items-center justify-between flex-col items-start">
                     <div class="flex items-center gap-6">
                         <div class="flex items-center justify-center h-12 w-12 rounded bg-primary text-primary-light dark:bg-accent">
                             <fa-icon :icon="exp.icon" class="text-2xl"/>
                         </div>
-                        <div class="flex flex-col gap-1">
+                        <div class="flex flex-col gap-1 whitespace-nowrap">
                             <span class="font-medium text-primary dark:text-accent">{{ exp.company }}</span>
                             <span class="font-normal text-primary-dark-200/75 dark:text-primary-light-200/75">{{ exp.position }}</span>
                         </div>
                     </div>
-                    <div class="">
-                        <span class="font-medium text-primary-dark/50 dark:text-primary-light/65">{{ exp.startDate }} - {{ exp.endDate }}</span>
+                    <div class="mt-2 sm:mt-0">
+                        <span class="font-medium text-sm sm:text-base text-primary-dark/50 dark:text-primary-light/50">{{ exp.startDate }} - {{ exp.endDate }}</span>
                     </div>
                 </div>
             </div>
