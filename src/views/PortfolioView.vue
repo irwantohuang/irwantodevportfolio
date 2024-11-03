@@ -98,8 +98,7 @@ const getColor = (tech: string) => {
                         <div class="absolute rounded-full border-2 border-white w-28 h-28 animate-ping"></div>
                     </div>
                 </div>
-                <div class="flex-shrink w-full h-full flex justify-between items-center flex-col transition-[opacity] delay-200 duration-300"
-                    :class="onHoverContainer[index] ? 'xl:opacity-0' : 'xl:opacity-100'">
+                <div class="flex-shrink w-full h-full flex justify-between items-center flex-col transition-[opacity] delay-200 duration-300">
                     <div>
                         <p class="text-2xl font-semibold text-primary-dark-400 group-hover:text-primary dark:text-accent dark:group-hover:text-primary-200">{{ porto.title }}</p>
                         <p class="text-sm line-clamp-[8] text-justify font-normal text-primary-dark-200 dark:text-primary-light-200 dark:group-hover:text-primary-light group-hover:text-primary-dark mt-2">{{ porto.portfolioDetail.description }}</p>
