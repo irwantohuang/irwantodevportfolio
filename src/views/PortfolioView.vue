@@ -78,8 +78,8 @@ const getColor = (tech: string) => {
                 class="flex items-start flex-col xl:flex-row gap-x-4 gap-y-2 w-full p-2 transition-all group hover:shadow-md rounded" 
                 >
                 <div 
-                    class="aspect-video w-full flex-shrink-0 relative overflow-hidden transition-all duration-300 ease-in-out rounded"
-                    :class="onHoverContainer[index] ? 'xl:max-w-full' : 'xl:max-w-[600px]'" 
+                    class="aspect-video w-full flex-shrink-0 relative overflow-hidden transition-all duration-300 ease-in-out xl:max-w-[600px]"
+                    :class="onHoverContainer[index] ? 'rounded-none' : 'rounded-lg'" 
                     @mouseenter="porto.videoUrl !== null ? handleMouse(true, index) : null"
                     @mouseleave="porto.videoUrl !== null ? handleMouse(false, index) : null"
                 >

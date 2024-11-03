@@ -13,7 +13,7 @@ export const portfolios: Portfolio[] = [
         id: 1,
         category: ['Web Development'],
         thumbnailUrl: Cryptotrack,
-        videoUrl: `${youtubeUrl}/embed/na_WvfObblA`,
+        videoUrl: `${youtubeUrl}/embed/v_M5CP6p3oU`,
         title: "Cryptotrack",
         portfolioDetail: {
             description: "Cryptotrack is a landing page offering real-time crypto data, the latest news, security tips, and live charts. Built using CoinRanking and News API, it provides a simple and secure platform for users to stay updated on the crypto market.",
